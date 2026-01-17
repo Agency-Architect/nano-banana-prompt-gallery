@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,96 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="page-container">
         <header class="header">
             <h1 class="logo">Nano Banana</h1>
             <p class="subtitle">Premium Prompt Gallery</p>
         </header>
-        
+
         <main id="gallery" class="gallery-grid">
-            <!-- Cards will be injected here by script.js -->
+            <!-- 学園モノ カード -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>🌸 学園モノ（School Life）</h3>
+                    <span class="badge">Shoujo Manga</span>
+                </div>
+                <div class="card-body">
+                    <div class="prompt-preview">
+                        <img src="/images/manga-school-preview.jpg" alt="学園マンガスタイルのプレビュー" class="preview-image">
+                    </div>
+                    <div class="prompt-content">
+                        <h4>プロンプト</h4>
+                        <pre
+                            class="prompt-text">Japanese manga style, high school romance scene, beautiful detailed anime girl with flowing black hair and school uniform, cherry blossom petals falling, school courtyard background, shoujo manga aesthetic, soft pastel colors, sparkling eyes, screen tone effects, detailed manga panels composition, romantic atmosphere, spring season, after school sunset lighting, manga page layout, professional manga art, clean linework, detailed shading</pre>
+                        <button class="copy-btn" onclick="copyPrompt(this)">📋 コピー</button>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">少女マンガ</span>
+                        <span class="tag">学園</span>
+                        <span class="tag">ロマンス</span>
+                        <span class="tag">桜</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SF カード -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>🤖 SF（Science Fiction）</h3>
+                    <span class="badge">Seinen Manga</span>
+                </div>
+                <div class="card-body">
+                    <div class="prompt-preview">
+                        <img src="/images/manga-sf-preview.jpg" alt="SFマンガスタイルのプレビュー" class="preview-image">
+                    </div>
+                    <div class="prompt-content">
+                        <h4>プロンプト</h4>
+                        <pre
+                            class="prompt-text">Japanese manga style, cyberpunk mecha pilot in futuristic cockpit, dynamic action pose, detailed mechanical designs, neon city skyline background, seinen manga aesthetic, high contrast lighting, speed lines and motion blur effects, holographic interface displays, metallic textures, dramatic perspective, intense expression, blue and purple color scheme, professional manga illustration, sharp detailed linework, cinematic composition</pre>
+                        <button class="copy-btn" onclick="copyPrompt(this)">📋 コピー</button>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">青年マンガ</span>
+                        <span class="tag">サイバーパンク</span>
+                        <span class="tag">メカ</span>
+                        <span class="tag">アクション</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ファンタジー カード -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>⚔️ ファンタジー（Fantasy）</h3>
+                    <span class="badge">Shounen Manga</span>
+                </div>
+                <div class="card-body">
+                    <div class="prompt-preview">
+                        <img src="/images/manga-fantasy-preview.jpg" alt="ファンタジーマンガスタイルのプレビュー" class="preview-image">
+                    </div>
+                    <div class="prompt-content">
+                        <h4>プロンプト</h4>
+                        <pre
+                            class="prompt-text">Japanese manga style, fantasy adventure scene, young hero with magical sword, mystical forest with ancient ruins, shounen manga aesthetic, epic composition, magical light effects, detailed fantasy clothing and armor, determined expression, action-ready pose, warm golden lighting, adventure atmosphere, manga speed lines, detailed background art, professional manga illustration, dramatic shadows and highlights, traditional Japanese manga techniques</pre>
+                        <button class="copy-btn" onclick="copyPrompt(this)">📋 コピー</button>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">少年マンガ</span>
+                        <span class="tag">冒険</span>
+                        <span class="tag">魔法</span>
+                        <span class="tag">ヒーロー</span>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
-            <p>&copy; 2024 Nano Banana. Crafted with care.</p>
+            <p>&copy; 2026 Nano Banana. Crafted with care.</p>
         </footer>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
