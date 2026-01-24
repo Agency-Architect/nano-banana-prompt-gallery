@@ -1,181 +1,209 @@
 :root {
-    --bg-color: #F5F5F7;
-    --card-bg: #FFFFFF;
-    --text-primary: #1D1D1F;
-    --text-secondary: #86868B;
-    --accent-color: #2997FF; /* Apple Blue */
-    --accent-hover: #0077ED;
-    --border-color: rgba(0, 0, 0, 0.04);
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08); /* Soft diffusion */
-    --font-stack: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --radius-lg: 20px;
-    --radius-md: 12px;
+  --bg-color: #F5F5F7;
+  --card-bg: #FFFFFF;
+  --text-primary: #1D1D1F;
+  --text-secondary: #86868B;
+  --accent-color: #2997FF;
+  /* Apple Blue */
+  --accent-hover: #0077ED;
+  --border-color: rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  /* Soft diffusion */
+  --font-stack: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --radius-lg: 20px;
+  --radius-md: 12px;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    font-family: var(--font-stack);
-    line-height: 1.5;
-    min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-stack);
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
 .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
 }
 
 /* Header */
 .header {
-    text-align: center;
-    margin-bottom: 60px;
-    animation: fadeInDown 0.8s ease-out;
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .logo {
-    font-size: 48px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-    color: var(--text-primary);
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: var(--text-primary);
 }
 
 .subtitle {
-    font-size: 21px;
-    color: var(--text-secondary);
-    font-weight: 400;
+  font-size: 21px;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 /* Gallery Grid */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-    padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding-bottom: 60px;
 }
 
 /* Card */
 .card {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    opacity: 0; /* For entry animation */
-    animation: fadeInUp 0.6s ease-out forwards;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  /* For entry animation */
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .card-content {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .card-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 12px;
-    letter-spacing: -0.01em;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
 .card-description {
-    font-size: 15px;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
 }
 
 .prompt-block {
-    background-color: #F5F5F7;
-    padding: 16px;
-    border-radius: var(--radius-md);
-    font-family: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
-    font-size: 13px;
-    color: var(--text-primary);
-    overflow-x: auto;
-    white-space: nowrap;
-    border: 1px solid rgba(0,0,0,0.02);
-    margin-bottom: 20px;
+  background-color: #F5F5F7;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-family: "SF Mono", "Menlo", "Monaco", "Courier New", monospace;
+  font-size: 13px;
+  color: var(--text-primary);
+  overflow-x: auto;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 20px;
 }
 
 /* Button */
 .copy-btn {
-    width: 100%;
-    padding: 12px 20px;
-    background-color: var(--text-primary); /* Apple often uses black layout actions on white */
-    color: white;
-    border: none;
-    border-radius: 999px; /* Pill shape */
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: var(--text-primary);
+  /* Apple often uses black layout actions on white */
+  color: white;
+  border: none;
+  border-radius: 999px;
+  /* Pill shape */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .copy-btn:hover {
-    background-color: #333336;
-    transform: scale(1.02);
+  background-color: #333336;
+  transform: scale(1.02);
 }
 
 .copy-btn:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .copy-btn.copied {
-    background-color: #34C759; /* Apple Green for success */
-    color: white;
+  background-color: #34C759;
+  /* Apple Green for success */
+  color: white;
 }
 
 /* Footer */
 .footer {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 13px;
-    margin-top: 40px;
-    border-top: 1px solid var(--border-color);
-    padding-top: 32px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 32px;
 }
 
 /* Animations */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Staggered Delay Utility classes for up to 10 items will be added in JS or simplified here */
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-@
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
 .card {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -183,7 +211,7 @@ body {
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
@@ -201,7 +229,7 @@ body {
 }
 
 .badge {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85em;
@@ -264,6 +292,32 @@ body {
   background: #48bb78;
 }
 
+/* Expert Insight */
+.expert-insight {
+  background-color: #F0F9FF;
+  border-left: 4px solid #3B82F6;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.expert-insight h5 {
+  color: #1E40AF;
+  margin: 0 0 8px 0;
+  font-size: 0.95em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.expert-insight p {
+  color: #334155;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95em;
+}
+
 .card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -281,4 +335,3 @@ body {
   font-size: 0.85em;
   font-weight: 500;
 }
-@
